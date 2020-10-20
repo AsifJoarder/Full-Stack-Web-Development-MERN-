@@ -81,7 +81,7 @@ body {
     float: left;
 }
 
-#navbar ul li a:hover {
+#navbar ul li a:hover{
     background: #444;
     color: #f7c08a;
 }
@@ -348,7 +348,7 @@ body {
     width: 70%;
     background: #fff;
     margin: auto;
-    height: 620px;
+    height: 670px;
 }
 
 #contact h1 {
@@ -382,4 +382,59 @@ body {
     border-radius: 4px;
     padding: 13px 10px;
     
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #f7c08a;
+}
+
+#contact button {
+    padding: 10px 20px;
+    margin: 10px 0px;
+    background: #444;
+    color: #fff;
+    border:1px solid #333;
+    border-radius: 4px;
+}
+
+#contact button:hover {
+    background: #f7c08a;
+    color: #fff;
+    border:1px solid #f7c08a;
+}
+
+/* Contact Informations */
+
+#contact-info {
+    background-color: #333;
+}
+
+.container-info {
+    width: 60%;
+    margin: auto;
+    color: #fff;
+    overflow: hidden;
+}
+
+#contact-info .container-info .infos {
+    
+    float: left;
+    height: 200px;
+    width: 33%;
+    text-align: center;
+}
+
+#contact-info .container-info .infos i {
+    margin: 30px 0px 15px 0px;
+}
+
+#contact-info .container-info .infos p {
+    margin-top: 10px;
+}
+
+#navbar ul li .select {
+    background: #f7c08a;
+    color: #333;
 }
