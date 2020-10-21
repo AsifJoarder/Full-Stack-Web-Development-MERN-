@@ -1,0 +1,84 @@
+/* Navbar */
+
+#navbar h1 {
+    float: none;
+    padding: 18px;
+    text-align: center;
+}
+
+#navbar ul {
+    float: none;
+    width: 90%;
+    margin: auto;
+ 
+}
+
+#navbar ul li {
+    float: none;
+ 
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px 10px 10px 10px ;
+    text-align: center;
+    
+}
+
+
+/* 
+=======   Designing Home Page ======
+*/
+
+/* Showcase Section */
+
+.showcase {
+   
+    height: 75vh;   
+}
+
+#showcase-content {
+    padding-top: 80px;  
+    
+}
+
+  #showcase-content p {
+    padding-bottom: 1.5em;
+    font-size: 1.3em;
+    color: #fff;
+    text-align: justify;
+    padding: 0px 15px 40px 15px;
+    
+}
+
+
+/* History Section */
+
+#home-info {
+    background: #444;
+    height:100vh;
+    
+    
+}
+
+
+#home-info .info-img {
+    float: none;
+    display: block;
+    width: 100%;
+    min-height: 50vh;
+}
+
+#home-info .info-content {
+    float: none;
+    width: 100%;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+    
+    
+    
+    
+}
