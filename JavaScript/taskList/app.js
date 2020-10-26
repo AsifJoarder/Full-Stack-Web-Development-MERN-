@@ -32,6 +32,19 @@ function toStorage (task){
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+function removeFromStorage(item){
+    
+    if(localStorage.getItem('tasks')!==null){
+        tasks = JSON.parse(localStorage.getItem('tasks'));
+        tasks.forEach(function(task, index){
+            if(item.textContent === task){
+                tasks.splice(index,1);
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+            }
+        })
+    }
+}
+
 
 function fromStorage () {
     if(localStorage.getItem('tasks') !== null){
@@ -48,7 +61,13 @@ function fromStorage () {
 
 /* Event Listeners */ 
 
+// Add task
 form.addEventListener('submit',addTask);
+
+// Remove Task
+
+taskList.addEventListener('click',deleteTask);
+
 
 
 
@@ -69,6 +88,16 @@ function addTask(e){
         taskList.appendChild(li);
         task.value = '' ;
         e.preventDefault();
+    }
+}
+
+
+function deleteTask (e) {
+    if(e.target.parentElement.classList.contains('delete-item')){
+        if(confirm('Are You Sure ?')){
+            e.target.parentElement.parentElement.remove();
+            removeFromStorage(e.target.parentElement.parentElement); 
+        }
     }
 }
 
