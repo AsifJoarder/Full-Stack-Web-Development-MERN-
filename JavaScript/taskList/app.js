@@ -58,7 +58,8 @@ function fromStorage () {
 }
 
 
-
+loadAll();
+function loadAll(){
 /* Event Listeners */ 
 
 // Add task
@@ -68,6 +69,11 @@ form.addEventListener('submit',addTask);
 
 taskList.addEventListener('click',deleteTask);
 
+// filter all task
+
+filter.addEventListener('keyup',filterLists);
+
+}
 
 
 
@@ -101,6 +107,22 @@ function deleteTask (e) {
     }
 }
 
+function filterLists(e){
+    const text = e.target.value.toLowerCase();
+    console.log('hello');
+    
+    // get all the list item and iterate through all
+    const textContent = querySelectorAll('.collction-item');
+    textContent.forEach(function(li){
+        const liContent = li.firstChild.textContent;
+        if(liContent.toLowerCase().indexOf(text) !== -1){
+            li.style.diplay = 'block';
+        }else{
+            li.style.display = 'none';
+        }
+    
+    });  
+}
 
 
 
