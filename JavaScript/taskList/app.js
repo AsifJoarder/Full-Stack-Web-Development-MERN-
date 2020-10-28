@@ -3,7 +3,7 @@
 const form = document.querySelector('#task-form');
 const task = document.querySelector('#task');
 const addTaskBtn = document.querySelector('.btn');
-const filter = document.querySelector('#filter');
+const filterElement = document.querySelector('#filter');
 const clrTaskBtn = document.querySelector('.clear-tasks');
 const taskList = document.querySelector('.collection');
 
@@ -71,7 +71,7 @@ taskList.addEventListener('click',deleteTask);
 
 // filter all task
 
-filter.addEventListener('keyup',filterLists);
+filterElement.addEventListener('input',filterLists);
 
 }
 
@@ -112,8 +112,7 @@ function filterLists(e){
     console.log('hello');
     
     // get all the list item and iterate through all
-    const textContent = querySelectorAll('.collction-item');
-    textContent.forEach(function(li){
+        document.querySelectorAll('.collection-item').forEach(function(li){
         const liContent = li.firstChild.textContent;
         if(liContent.toLowerCase().indexOf(text) !== -1){
             li.style.diplay = 'block';
@@ -122,6 +121,12 @@ function filterLists(e){
         }
     
     });  
+
+    if(text === ''){
+        document.querySelectorAll('.collection-item').forEach(function(li){
+            li.style.display = 'block';
+        })
+    }
 }
 
 
